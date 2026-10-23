@@ -1,0 +1,9 @@
+{
+  "title": "Exact small values for Erdős problem #757: Sidon subsets of (4,5)-sets",
+  "upload_type": "dataset",
+  "description": "Explicit (4,5)-sets of n integers whose largest Sidon subset has size f(n), for n = 6–15, 17, 19, 21, matching the Henning–Yeo lower bound of Ma and Tang, so f(n) is determined for these n. Includes an exact brute-force checker. Search code and checker developed with Claude Code (Anthropic) under the direction of the author.",
+  "creators": [{"name": "SK, Jeetu"}],
+  "license": "cc-by-4.0",
+  "keywords": ["Erdős problems", "Sidon sets", "(4,5)-sets", "additive combinatorics", "computer search"],
+  "related_identifiers": [{"identifier": "arXiv:2602.23282", "relation": "references", "scheme": "arxiv"}]
+}
