@@ -39,14 +39,17 @@ arithmetic.
   iteration 130, once the max ratio was below 0.38553279. The threshold for 0.824120 is 0.3855328021, and the next
   iterate's max ratio is never larger. Min vᵢ = 0.0036. Our λ_cert is a little above the claimant's 0.385532705
   (we stopped earlier), and it still certifies 0.824120.
-- Vectors are stored as float32 (exact doubles; any positive vector certifies); sums are in double.
+- Vectors are stored as float32 (exact doubles; any positive vector certifies); sums are in double. With float32
+  storage Lueker's 10⁻¹⁰ stopping rule is out of reach, so both runs stop on a target λ below the bound's threshold
+  (h = 9: 0.3647086 < 0.3647086853; h = 10: 0.38553279 < 0.3855328021). An earlier double-vector run of the same
+  program at h = 9, run to Lueker's rule, gave λ_cert = 0.364708361184292, γ₂ ≤ 0.8251002729.
 
 ## Results
 
 | h | z | states | our λ_cert | γ₂ ≤ (exact) | certified | claim |
 |---|---|---|---|---|---|---|
 | 8 | 0.3209 | 6,419,109 | 0.341832258732947 | 0.8262791785922… | 0.826280 | Lueker 0.826280 |
-| 9 | 0.3298 | 51,425,006 | 0.364708361184292 | 0.8251002729380… | **0.825101** | 0.825101 ✓ |
+| 9 | 0.3298 | 51,425,006 | 0.364708580678097 | 0.8251007652493… | **0.825101** | 0.825101 ✓ |
 | 10 | 0.3376 | 400,253,317 | 0.385532782589023 | 0.8241199562929… | **0.824120** | 0.824120 ✓ |
 
 ## Reproduce
@@ -58,7 +61,7 @@ cc -O2 -ffp-contract=off -o lcsauto lcsauto.c -lm -lpthread
 ```
 
 ```bash
-./run.sh 9 0.3298
+./run.sh 9 0.3298 0.3647086
 ```
 
 ```bash
