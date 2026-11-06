@@ -12,9 +12,11 @@ Szabó, FoCM 2024, Theorem 1.2), from the blow-ups of a 192-vertex Cayley graph.
 
 **Provenance.** The starting point is that 192-vertex graph (`c5.graph6.txt` from Zenodo 10.5281/zenodo.6602512,
 CC-BY-4.0; sha256 in `results/input_sha256.txt`), read as a 0/1 step graphon: red between blocks i ≠ j iff ij is an
-edge, blue inside blocks. `k5.py refine` then runs projected gradient descent on all 18,528 symmetric entries
-(inside-block densities included) until the line search stalls (103 steps). The result is rounded to multiples of
-2⁻²⁰.
+edge, blue inside blocks. `k5.py refine` then runs projected gradient descent over all 18,528 symmetric entries
+(inside-block densities included) until the line search stalls (103 steps), and the result is rounded to multiples
+of 2⁻²⁰. In the final graphon only 1,248 block pairs have new values (1,152 at 913211/2²⁰ and 96 at 706864/2²⁰);
+the other between-block densities stay 0 or 1, and every inside-block density stays 0. (An earlier version of this
+note said all entries were moved; thanks to Carlos Toledo for the correction.)
 
 **Verification.** `exact5.py` computes the integer numerator N(R) + N(2²⁰ − R), with
 N(R) = Σ_{i,j} R_ij tr((diag(R_i ∘ R_j) R)³), over every pair of blocks (no symmetry assumed). It works modulo 11
