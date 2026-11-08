@@ -1,0 +1,14 @@
+sha256 17c7640aa37dab9fab0f8fd438b881319d7a2b527eec918da0a84ecdc3919d35
+K=98304 n=98368 max weight=72057594037927928 (2^56-8? True) zero tail=43/64
+C direct: 2.9s
+Kronecker: 107.6s
+lags that differ between the two implementations: 0
+exact value 11005597691381428229825143056897540096 / 26819380902505338613619516881482225625 = 41035987114651620459e-20
+argmin lags [98304]
+equals the certificate fraction: True | reduced: True
+implies claim 0.4103598711 : True | one unit higher ( 512949839/1250000000 ) implied: False
+  above #270 stated: True (by 2.1990e-07)
+  above #318 stated: True (by 5.9793e-06)
+  above page best 0.4103333 [Kos2026]: True (by 2.6518e-05)
+control: one weight +1 changes the value: True
+control: largest weight +1% changes the value: True | still implies claim: False
