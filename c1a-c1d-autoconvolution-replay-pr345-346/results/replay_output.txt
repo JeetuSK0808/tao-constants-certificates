@@ -1,0 +1,29 @@
+selftest: 80 random cases (non-negative, signed, extreme +-2^56), conv.c == kronconv == naive at every knot
+== c1d_upper_n163840_v2.json sha256 253d0ca68f060eedc6fd24e3afc6b1ce477cb6a97e25d80453e4616362153a82
+C_1d: n = 163840 cells on [-1/4,1/4], values in [-27149727832657424, 72057594037927936], S = 48027758324852500978
+conv.c (3s) and kronconv (7s, 144-bit slots) agree at all 327679 knots
+max |c_m| at m = [52929] (sum index i+j = m); next largest knot lower by 1.818e-14 in value
+value = 838861227937471890002426104328885370880/576666392427609677715360509915372739121
+      = 1.45467334138563686456...
+equals the certificate's stated fraction: True
+implies the claim 1.4546733414: True;  would imply 1.4546733413: False
+  below page best unstarred [CERT2026] by 8.3982e-03
+  below [SCIEL2026] starred by 3.1815e-03
+  below #312 (Julsgaard) by 5.4323e-05
+  below #270 (vidigoat, 10 Nov), exact by 4.3819e-09
+  below #345's 9 Nov certificate by 6.0353e-09
+control 1: v[163839] -= 1 -> value changes: True (1.45467334138563686462...)
+control 2: largest |v| cut by 1% -> value 1.456705774812..., implies claim: False
+== c1a_upper_n262144_v2.json sha256 cfbf05a1245394c910a54cafcbe692704332d5467d6466d58e0312444a82bff6
+C_1a: n = 262144 cells on [-1/4,1/4], values in [0, 72057594037927936], S = 278463337245757359030
+conv.c (6s) and kronconv (13s, 144-bit slots) agree at all 524287 knots
+max |c_m| at m = [303135] (sum index i+j = m); next largest knot lower by 1.369e-14 in value
+value = 29131355358281158426614181216278902472704/19385457547511099408999611434350080635225
+      = 1.50274272798999968357...
+equals the certificate's stated fraction: True
+implies the claim 1.5027427280: True;  would imply 1.5027427279: False
+  below [A2026] page best, exact by 7.5872e-07
+  below #270 (vidigoat, 10 Nov), exact by 6.0647e-09
+  below #346's 8 Nov certificate by 9.5100e-09
+control 1: v[0] -= 1 -> value changes: True (1.50274272798999968358...)
+control 2: largest |v| cut by 1% -> value 1.502750505275..., implies claim: False

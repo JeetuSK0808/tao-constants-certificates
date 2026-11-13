@@ -1,0 +1,18 @@
+selftest: 60 random spike+profile cases, lags2.c(+spike) == kronlags == naive at every lag
+certificate sha256 fc69d772d8dbd7ddbaab994e44164bed1b9eeca3cfb6d972732d677226362352
+K = 1048576, 1048577 weights, w_0 = 1152921504606846848 (2^60 - 128: True), share of mass 0.4014, zero for 1 <= i < 167980, other weights < 2^42
+lags2.c+spike (17s) and kronlags (154s, 152-bit slots) agree at all 1048577 lags
+min at k = [179183]
+value = 3385460305559548364109249137976803328/8249614514518895716878560524318391809
+      = 0.41037800003882762970...
+equals the certificate's stated fraction: True
+implies the claim 0.4103780000: True;  would imply 0.4103780001: False
+lags in [167980, 1048576] within 1.7e-13 of the minimum: 880597 of 880597
+smallest lag below 167980: 0.4103782842
+  above #344's morning certificate 0.4103774129 (printed) by 5.8714e-07
+  above #354 (SeanSagait) 0.4103772 (printed) by 8.0004e-07
+  above #270 (vidigoat) 0.4103608339 (printed) by 1.7166e-05
+  above page best 0.4103333 [Kos2026] by 4.4700e-05
+control 1: w[608278] += 1 -> value changes: True
+control 2: spike w_0 raised 1% -> value 0.407103179170..., still implies the claim: False
+~/miniforge3/bin/python3 -I src/replay.py data/c1c_lower_K1048576.json  572.28s user 11.75s system 123% cpu 7:51.87 total

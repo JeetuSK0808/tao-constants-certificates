@@ -11,6 +11,8 @@ pull request there links a pinned commit here.
 | `c31-chvatal-sankoff-replay/` | C_31 (Chvátal–Sankoff, binary) | Independent replay of Lueker-automaton upper bounds (h = 8, 9, 10, all certified) |
 | `c1c-autocorrelation-replay-pr344/` | C_1c (Barnard–Steinerberger autocorrelation) | Independent exact replay of the lower bound 0.4103598711 of PR #344 (two implementations, every lag) |
 | `c1b-overlap-replay-pr359/` | C_1b (Erdős minimum overlap) | Independent exact replay of the upper bound 0.3808585498 of PR #359 (two implementations, every shift) |
+| `c1c-autocorrelation-replay-pr344-k1048576/` | C_1c (Barnard–Steinerberger autocorrelation) | Independent exact replay of the current lower bound 0.4103780000 of PR #344 (K = 2^20; two implementations, every lag) |
+| `c1a-c1d-autoconvolution-replay-pr345-346/` | C_1a (Sidon autocorrelation), C_1d (signed autoconvolution) | Independent exact replays of the upper bounds 1.5027427280 (PR #346) and 1.4546733414 (PR #345) (two implementations, every knot) |
 | `c84b-sum-product-check/` | C_84b (sum-product exponent, Erdős #52) | Interval-arithmetic recheck of the [Al26] constant: c ≈ 0.000706 at the note's parameters, below 0.000714 at the regulator limit, so 0.000719 is not reached |
 
 Related: the Ramsey certificate for R(3,33) ≥ 241 is archived separately on Zenodo, doi:10.5281/zenodo.23552014.
