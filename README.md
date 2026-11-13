@@ -10,6 +10,7 @@ pull request there links a pinned commit here.
 | `c5b-erdos757-small-n/` | C_5b (Erdős problem #757) | Exact values f(n) for 6 ≤ n ≤ 15 and n = 17, 19, 21: explicit (4,5)-sets plus an exact checker |
 | `c31-chvatal-sankoff-replay/` | C_31 (Chvátal–Sankoff, binary) | Independent replay of Lueker-automaton upper bounds (h = 8, 9, 10, all certified) |
 | `c1c-autocorrelation-replay-pr344/` | C_1c (Barnard–Steinerberger autocorrelation) | Independent exact replay of the lower bound 0.4103598711 of PR #344 (two implementations, every lag) |
+| `c1b-overlap-replay-pr359/` | C_1b (Erdős minimum overlap) | Independent exact replay of the upper bound 0.3808585498 of PR #359 (two implementations, every shift) |
 | `c84b-sum-product-check/` | C_84b (sum-product exponent, Erdős #52) | Interval-arithmetic recheck of the [Al26] constant: c ≈ 0.000706 at the note's parameters, below 0.000714 at the regulator limit, so 0.000719 is not reached |
 
 Related: the Ramsey certificate for R(3,33) ≥ 241 is archived separately on Zenodo, doi:10.5281/zenodo.23552014.

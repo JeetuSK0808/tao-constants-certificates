@@ -1,0 +1,15 @@
+selftest: 60 random cases, shifts.c == kron1b == naive at every shift
+certificate sha256 e285b485a1f8f28e86bd3a906effbe930f968b553de6044f501d2bf92f5a9ca5
+n = 114688, D = 281474976710656 = 2^48, box and mass exact (sum a_i = nD/2)
+shifts.c (1.0s) and kron1b (5.5s, 120-bit slots) agree at all 229375 shifts
+max S_k = 1730339319993979413608789703258449 at k = [-11464, 11464]
+next largest shift lower by 1.2907714873705E-12 (in value)
+value = 1730339319993979413608789703258449/4543259751217974174964184288067584
+      = 0.38085854975166311715
+equals the certificate's stated fraction: True
+implies the claim 0.3808585498: True;  would imply 0.3808585497: False
+below [A2026] exact 0.38085855031642856010... by 5.647654429522402E-10
+below [EA2026] exact 0.38085857485785830914... by 2.51061951919922402E-8
+control 1: a[49339] += 1 -> value changes: True (0.38085854975166311713)
+control 2: move 1000000000 units from cell 102847 to cell 11759 (mass kept) -> value 0.38085854981443648143, still implies claim: False
+control 3: every a_i raised 1% (mass broken, not checked here) -> value 0.38146340836673220287, implies claim: False
