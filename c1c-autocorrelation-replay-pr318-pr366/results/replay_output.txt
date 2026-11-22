@@ -1,0 +1,23 @@
+selftest: 80 random cases, lags2.c == kronlags == naive at every lag k = 0..K
+== #318 [J2026]
+certificate sha256 fe11336b771dbc4abc8914ec717dc39ead2ba34e67bbed724056571dbe2352d2
+K = 98304, 98368 weights, largest < 2^41, support [0, 98368/98304)
+lags2.c (0.7s) and kronlags (4.4s, 112-bit slots) agree at all 98305 lags
+min at k = [47318]
+value = 2582127846607416062611587072/6292441470965870058830439361
+      = 0.41035389181157810991...
+equals the stated fraction: True
+implies the claim 0.4103538918: True
+red control: w[20] += 1 -> value changes: True
+== #366 [Esc2026]
+certificate sha256 ff375289fc0eb47d9032d9ebc1307d8c92ba5d18c8be651df3894d70e14e9ead
+K = 98304, 98368 weights, largest < 2^50, support [0, 98368/98304)
+lags2.c (0.4s) and kronlags (5.8s, 128-bit slots) agree at all 98305 lags
+min at k = [15880]
+value = 1376728953781146098572851250003968/3354819039892156766926073767410361
+      = 0.41037353651879897149...
+equals the stated fraction: True
+implies the claim 0.4103735: True
+equals the certificate's own score fields: True
+red control: w[16] += 1 -> value changes: True
+./run.sh  26.51s user 0.67s system 114% cpu 23.757 total
