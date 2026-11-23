@@ -1,0 +1,7 @@
+pieces: [(0.8398028394827648, 0.1601971605172352), (1.0, 3.76158192263132e-37)]  last hi - 1 == s/2: True
+int h == M: True  (so int f = 1 + M)
+g(1-t1) - T = 4.1726786880e-71  exact zero: False  sign: 1
+g(1-t1+s/4) - T = 1.0450044116e-71  exact zero: False  sign: 1
+g(1-t1+s/2) - T = 0.0000000000e+00  exact zero: True  sign: 0
+g(1) - T = 0.0000000000e+00  exact zero: True  sign: 0
+g(0.5) - T = 1.6972878114e-36  exact zero: False  sign: 1
